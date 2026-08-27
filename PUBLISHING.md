@@ -20,7 +20,7 @@ npm login
 npm publish --access public
 ```
 
-The first package is `aether-themes@0.1.0`; the current release is `aether-themes@0.1.1`. Use a version bump for every later published change.
+The first package is `aether-themes@0.1.0`; the current release is `aether-themes@0.1.2`. Use a version bump for every later published change.
 
 ## Switching W.Site to the published package
 
