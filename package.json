@@ -28,7 +28,7 @@
     "./themes/persona.css": "./styles/themes/persona.css"
   },
   "bin": {
-    "aether-themes": "./tools/generate-theme-css.mjs"
+    "aether-themes": "tools/generate-theme-css.mjs"
   },
   "keywords": [
     "css",
