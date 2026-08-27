@@ -84,15 +84,19 @@ The generator validates theme names, duplicate entries, and `defaultTheme`. Use 
 
 ## Build a site with an AI agent
 
-For a guided, from-scratch setup, give this repository to an AI coding agent and ask it to read [`skills/aether-blog/SKILL.md`](./skills/aether-blog/SKILL.md). The root [`AGENTS.md`](./AGENTS.md) makes the entry point discoverable in agents that support the convention.
+For a guided, from-scratch setup, open an empty directory that will become your website and give the AI agent this repository as a reference. Do not open the Aether theme repository as the website's working directory: Aether is the dependency and visual layer, while your website owns its files, content, routes, and configuration.
 
-If you are new to terminal-based development, copy [`STARTER_PROMPT.md`](./STARTER_PROMPT.md). It first asks a short setup questionnaire about the site name, description, author, sections, language, and themes, then creates a disposable test site inside the current workspace after you confirm the plan.
+The root [`AGENTS.md`](./AGENTS.md) and [`skills/aether-blog/SKILL.md`](./skills/aether-blog/SKILL.md) make the setup entry point discoverable in agents that support repository conventions.
+
+If you are new to terminal-based development, copy [`STARTER_PROMPT.md`](./STARTER_PROMPT.md). It asks a short setup questionnaire about the site name, description, author, sections, language, and themes, then creates the formal website directly in the current workspace after you confirm the plan. It refuses to create files when the current workspace is the Aether theme repository.
 
 The shortest handoff message is:
 
 ```text
-请阅读 https://github.com/robeshell/aether-themes/blob/main/STARTER_PROMPT.md，先向我提问建站需求，等我确认方案后，再按提示词在当前目录从零创建并启动网站。
+请阅读 https://github.com/robeshell/aether-themes/blob/main/STARTER_PROMPT.md，先向我提问建站需求，等我确认方案后，把当前工作目录作为正式网站根目录从零创建并启动网站。不要创建 aether-ai-smoke-test 或其他测试目录；如果当前目录是 aether-themes 仓库，请先停止并提示我换到网站目录。
 ```
+
+如果你只是维护 Aether 包本身，请使用 [`SMOKE_TEST_PROMPT.md`](./SMOKE_TEST_PROMPT.md)。它会在仓库内创建隔离的 `aether-ai-smoke-test/site`，只用于验收 npm 包和主题生成器，不用于创建用户网站。
 
 If you already have an Aether site, use [`UPDATE_PROMPT.md`](./UPDATE_PROMPT.md). It gives the agent a one-line update command plus a cautious full workflow that preserves content, configuration, local snapshots, and uncommitted work before rebuilding and checking the site.
 

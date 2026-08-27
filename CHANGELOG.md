@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.4 — 2026-08-27
+
+- Separate the formal user-site setup prompt from the package-maintainer smoke-test prompt.
+- Make the formal setup create the site in the current website workspace and refuse to scaffold inside the Aether repository.
+- Document `SMOKE_TEST_PROMPT.md` as the only workflow that creates `aether-ai-smoke-test`.
+
 ## 0.1.3 — 2026-08-27
 
 - Add `UPDATE_PROMPT.md` with one-line and full workflows for safely updating an existing Aether site through an AI agent.
