@@ -1,0 +1,33 @@
+{
+  "name": "aether-themes",
+  "version": "0.1.0",
+  "description": "Expressive, swappable CSS themes for personal sites.",
+  "type": "module",
+  "license": "MIT",
+  "sideEffects": ["**/*.css"],
+  "files": [
+    "styles",
+    "README.md",
+    "THEME_CONTRACT.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": "./styles/foundation.css",
+    "./foundation.css": "./styles/foundation.css",
+    "./themes/minimal.css": "./styles/themes/minimal.css",
+    "./themes/magazine.css": "./styles/themes/magazine.css",
+    "./themes/terminal.css": "./styles/themes/terminal.css",
+    "./themes/cyber.css": "./styles/themes/cyber.css",
+    "./themes/island.css": "./styles/themes/island.css",
+    "./themes/wilds.css": "./styles/themes/wilds.css",
+    "./themes/persona.css": "./styles/themes/persona.css"
+  },
+  "keywords": [
+    "css",
+    "themes",
+    "personal-site",
+    "astro",
+    "design-system"
+  ]
+}

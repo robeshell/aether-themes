@@ -1,0 +1,65 @@
+# Aether
+
+Expressive, swappable CSS themes for personal sites.
+
+Aether is the visual layer extracted from [W.Site](https://github.com/robeshell/robeshell.github.io). It gives a content-first personal site a small set of distinct atmospheres without coupling the theme package to one person's articles, routes, or content model.
+
+## Included themes
+
+| Theme | Direction |
+| --- | --- |
+| `minimal` | quiet whitespace and editorial order |
+| `magazine` | paper, columns, and print rhythm |
+| `terminal` | command line and Matrix-like green phosphor |
+| `cyber` | hazard yellow, cyan diagnostics, and hard panels |
+| `island` | bright island life and soft rounded surfaces |
+| `wilds` | quiet ruins, earth tones, and wide landscape space |
+| `persona` | red-black cut-paper poster composition |
+
+## Usage
+
+Import the foundation once, then import the themes you want after it. Aether themes activate through the `data-theme` attribute on the root element:
+
+```css
+@import 'aether-themes/foundation.css';
+@import 'aether-themes/themes/minimal.css';
+@import 'aether-themes/themes/persona.css';
+```
+
+```html
+<html data-theme="persona">
+```
+
+The CSS is framework-agnostic. It expects the semantic class contract documented in [`THEME_CONTRACT.md`](./THEME_CONTRACT.md), so you can use Astro, Eleventy, plain HTML, or another static-site tool.
+
+## Optional imagery
+
+Aether does not ship scraped or franchise-owned imagery. The `cyber`, `terminal`, and `wilds` themes expose optional image variables instead:
+
+```css
+:root[data-theme="cyber"] {
+  --aether-cyber-dots-image: url('/assets/cyber/dots-yellow.png');
+}
+
+:root[data-theme="terminal"] {
+  --aether-terminal-rain-image: url('/assets/terminal/matrix-rain.svg');
+}
+
+:root[data-theme="wilds"] {
+  --aether-wilds-header-image: url('/images/wilds-header.png');
+}
+```
+
+They default to `none`, so the themes work without any additional assets. Only add imagery that you own or have permission to redistribute.
+
+## Development
+
+```sh
+npm pack --dry-run
+```
+
+The package intentionally has no runtime dependency. Keep content, routes, and site-specific copy in the consuming site.
+
+## License
+
+MIT. See [`LICENSE`](./LICENSE).
