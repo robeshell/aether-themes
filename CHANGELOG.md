@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.5 — 2026-08-27
+
+- Clarify that Aether is a CSS theme layer, not a drop-in theme for every blog system.
+- Document Astro, Eleventy, plain HTML, and adapter-based integration boundaries in all README languages.
+
 ## 0.1.4 — 2026-08-27
 
 - Separate the formal user-site setup prompt from the package-maintainer smoke-test prompt.
