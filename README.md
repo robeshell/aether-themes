@@ -32,6 +32,20 @@ Import the foundation once, then import the themes you want after it. Aether the
 
 For a site that offers every built-in theme, import `aether-themes/all.css` instead.
 
+For AI-assisted site setup, give the repository to an agent and point it to [`skills/aether-blog/SKILL.md`](./skills/aether-blog/SKILL.md). The root [`AGENTS.md`](./AGENTS.md) makes this entry point discoverable in repositories that support the convention.
+
+### Select only the themes you need
+
+Copy [`aether.config.example.mjs`](./aether.config.example.mjs) to your site as `aether.config.mjs`, remove the themes you do not want, and generate a small import bundle:
+
+```sh
+npx aether-themes \
+  --config aether.config.mjs \
+  --output src/styles/aether-themes.css
+```
+
+The generator validates theme names, duplicate entries, and `defaultTheme`. The generated file imports only the selected themes; your theme picker can use the same `themes` array to hide the rest. Keep labels and descriptions in the consuming site's config so Aether remains content-agnostic.
+
 The CSS is framework-agnostic. It expects the semantic class contract documented in [`THEME_CONTRACT.md`](./THEME_CONTRACT.md), so you can use Astro, Eleventy, plain HTML, or another static-site tool.
 
 ## Optional imagery

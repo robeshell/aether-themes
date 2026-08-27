@@ -1,0 +1,5 @@
+interface:
+  display_name: "Aether Blog Builder"
+  short_description: "Build and publish an Aether personal blog"
+  brand_color: "#7C3AED"
+  default_prompt: "Use $aether-blog to set up an Aether-powered blog in this repository."

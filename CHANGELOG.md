@@ -7,3 +7,4 @@
 - Made cyber, terminal, and wilds imagery opt-in through CSS custom properties.
 - Added the `all.css` convenience entry point.
 - Added a package check workflow and publishing notes.
+- Added `aether.config.mjs` support and a validated theme-bundle generator.

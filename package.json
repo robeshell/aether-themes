@@ -7,7 +7,10 @@
   "sideEffects": ["**/*.css"],
   "files": [
     "styles",
+    "tools",
+    "skills",
     "README.md",
+    "aether.config.example.mjs",
     "THEME_CONTRACT.md",
     "CHANGELOG.md",
     "LICENSE"
@@ -23,6 +26,9 @@
     "./themes/island.css": "./styles/themes/island.css",
     "./themes/wilds.css": "./styles/themes/wilds.css",
     "./themes/persona.css": "./styles/themes/persona.css"
+  },
+  "bin": {
+    "aether-themes": "./tools/generate-theme-css.mjs"
   },
   "keywords": [
     "css",
