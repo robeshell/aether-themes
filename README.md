@@ -13,6 +13,21 @@ Aether gives a blog, notebook, photo journal, or music archive a distinct visual
 
 [Browse the demo site](https://robeshell.github.io/) · [Read the AI starter prompt](./STARTER_PROMPT.md) · [View the npm package](https://www.npmjs.com/package/aether-themes)
 
+## What Aether is (and is not)
+
+Aether is a framework-agnostic CSS theme layer, not a complete blog theme, site generator, or CMS. It does not provide routes, a content model, an admin panel, or ready-made templates for every blogging platform.
+
+The guided starter workflow uses Astro by default. The package itself has no Astro runtime dependency and can be integrated with any framework or static-site generator that can load global CSS, emit HTML, and add the semantic hooks documented in [`THEME_CONTRACT.md`](./THEME_CONTRACT.md).
+
+| Environment | Integration level |
+| --- | --- |
+| Astro | First-class starter workflow |
+| Eleventy or plain HTML | Direct CSS integration |
+| Other HTML-producing frameworks or static-site generators | Compatible after mapping templates to the contract |
+| Existing CMS or blog markup | Not drop-in; requires a template adapter or local overrides |
+
+In other words, Aether is portable, but it is not universally plug-and-play. The consuming site remains responsible for its markup, content, routes, and interactions.
+
 ## Why Aether
 
 - **Seven swappable themes** using one semantic markup contract.

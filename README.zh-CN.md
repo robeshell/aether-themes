@@ -13,6 +13,21 @@ Aether 为博客、笔记、照片日记或音乐档案提供鲜明的视觉氛�
 
 [浏览演示站](https://robeshell.github.io/) · [阅读 AI 正式建站提示词](./STARTER_PROMPT.md) · [查看 npm 包](https://www.npmjs.com/package/aether-themes)
 
+## Aether 是什么，不是什么
+
+Aether 是框架无关的 CSS 主题层，不是完整的博客主题、站点生成器或 CMS。它不提供路由、内容模型、后台，也不会为所有博客平台自动生成现成模板。
+
+引导式建站流程默认使用 Astro，但包本身没有 Astro 运行时依赖。只要一个框架或静态站点生成器能够加载全局 CSS、输出 HTML，并添加 [`THEME_CONTRACT.md`](./THEME_CONTRACT.md) 中记录的语义化钩子，就可以接入 Aether。
+
+| 环境 | 接入程度 |
+| --- | --- |
+| Astro | 内置正式建站流程 |
+| Eleventy 或原生 HTML | 可直接引入 CSS |
+| 其他能输出 HTML 的框架或静态站点生成器 | 将模板映射到契约后即可接入 |
+| 现有 CMS 或博客标记 | 不是即插即用，需要模板适配器或本地覆盖样式 |
+
+换句话说，Aether 具有可移植性，但不是对所有博客系统都零配置兼容。网站仍然负责自己的标记、内容、路由和交互。
+
 ## 为什么选择 Aether
 
 - **七套可切换主题**，共用一份语义化标记契约。
