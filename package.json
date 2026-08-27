@@ -18,6 +18,8 @@
     "tools",
     "skills",
     "README.md",
+    "README.zh-CN.md",
+    "README.ja.md",
     "STARTER_PROMPT.md",
     "SMOKE_TEST_PROMPT.md",
     "UPDATE_PROMPT.md",

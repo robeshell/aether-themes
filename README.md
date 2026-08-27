@@ -1,5 +1,7 @@
 # Aether
 
+[English](./README.md) · [简体中文](./README.zh-CN.md) · [日本語](./README.ja.md)
+
 [![npm version](https://img.shields.io/npm/v/aether-themes?logo=npm)](https://www.npmjs.com/package/aether-themes)
 [![npm downloads](https://img.shields.io/npm/dm/aether-themes?logo=npm)](https://www.npmjs.com/package/aether-themes)
 [![Check package](https://github.com/robeshell/aether-themes/actions/workflows/check.yml/badge.svg)](https://github.com/robeshell/aether-themes/actions/workflows/check.yml)
@@ -93,10 +95,10 @@ If you are new to terminal-based development, copy [`STARTER_PROMPT.md`](./START
 The shortest handoff message is:
 
 ```text
-请阅读 https://github.com/robeshell/aether-themes/blob/main/STARTER_PROMPT.md，先向我提问建站需求，等我确认方案后，把当前工作目录作为正式网站根目录从零创建并启动网站。不要创建 aether-ai-smoke-test 或其他测试目录；如果当前目录是 aether-themes 仓库，请先停止并提示我换到网站目录。
+Read https://github.com/robeshell/aether-themes/blob/main/STARTER_PROMPT.md. Ask me the setup questions first, wait for my confirmation, then create and start the formal website directly in the current workspace. Do not create `aether-ai-smoke-test` or any other test directory. If the current workspace is the `aether-themes` repository, stop and ask me to switch to a separate website directory.
 ```
 
-如果你只是维护 Aether 包本身，请使用 [`SMOKE_TEST_PROMPT.md`](./SMOKE_TEST_PROMPT.md)。它会在仓库内创建隔离的 `aether-ai-smoke-test/site`，只用于验收 npm 包和主题生成器，不用于创建用户网站。
+If you are maintaining the Aether package itself, use [`SMOKE_TEST_PROMPT.md`](./SMOKE_TEST_PROMPT.md). It creates an isolated `aether-ai-smoke-test/site` inside the repository for package and generator checks; it is not a user-site setup workflow.
 
 If you already have an Aether site, use [`UPDATE_PROMPT.md`](./UPDATE_PROMPT.md). It gives the agent a one-line update command plus a cautious full workflow that preserves content, configuration, local snapshots, and uncommitted work before rebuilding and checking the site.
 

@@ -5,6 +5,9 @@
 - Separate the formal user-site setup prompt from the package-maintainer smoke-test prompt.
 - Make the formal setup create the site in the current website workspace and refuse to scaffold inside the Aether repository.
 - Document `SMOKE_TEST_PROMPT.md` as the only workflow that creates `aether-ai-smoke-test`.
+- Make the default README English and add Simplified Chinese and Japanese translations.
+- Add a language switcher for English, Simplified Chinese, and Japanese at the top of each README.
+- Include the localized READMEs in the published package.
 
 ## 0.1.3 — 2026-08-27
 
