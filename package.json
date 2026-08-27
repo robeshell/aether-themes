@@ -15,6 +15,7 @@
   "exports": {
     ".": "./styles/foundation.css",
     "./foundation.css": "./styles/foundation.css",
+    "./all.css": "./styles/all.css",
     "./themes/minimal.css": "./styles/themes/minimal.css",
     "./themes/magazine.css": "./styles/themes/magazine.css",
     "./themes/terminal.css": "./styles/themes/terminal.css",

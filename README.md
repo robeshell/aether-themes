@@ -30,6 +30,8 @@ Import the foundation once, then import the themes you want after it. Aether the
 <html data-theme="persona">
 ```
 
+For a site that offers every built-in theme, import `aether-themes/all.css` instead.
+
 The CSS is framework-agnostic. It expects the semantic class contract documented in [`THEME_CONTRACT.md`](./THEME_CONTRACT.md), so you can use Astro, Eleventy, plain HTML, or another static-site tool.
 
 ## Optional imagery
