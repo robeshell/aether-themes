@@ -6,3 +6,4 @@
 - Added a documented semantic class contract.
 - Made cyber, terminal, and wilds imagery opt-in through CSS custom properties.
 - Added the `all.css` convenience entry point.
+- Added a package check workflow and publishing notes.
