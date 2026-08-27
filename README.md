@@ -88,6 +88,8 @@ For a guided, from-scratch setup, give this repository to an AI coding agent and
 
 If you are new to terminal-based development, copy [`STARTER_PROMPT.md`](./STARTER_PROMPT.md). It tells the agent to create a disposable test site inside the current workspace, install Aether, configure selected themes, render representative content, run the build, and report the result without modifying the theme source.
 
+If you already have an Aether site, use [`UPDATE_PROMPT.md`](./UPDATE_PROMPT.md). It gives the agent a one-line update command plus a cautious full workflow that preserves content, configuration, local snapshots, and uncommitted work before rebuilding and checking the site.
+
 ## Markup contract
 
 Aether styles semantic hooks rather than page-specific routes. Read [`THEME_CONTRACT.md`](./THEME_CONTRACT.md) for the required hooks and rich-content hooks, including images, video, audio, code, formulas, and galleries.

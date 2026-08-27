@@ -1,6 +1,6 @@
 {
   "name": "aether-themes",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Framework-agnostic, swappable CSS themes and an AI-assisted starter workflow for personal sites.",
   "type": "module",
   "license": "MIT",
@@ -19,6 +19,7 @@
     "skills",
     "README.md",
     "STARTER_PROMPT.md",
+    "UPDATE_PROMPT.md",
     "aether.config.example.mjs",
     "THEME_CONTRACT.md",
     "CHANGELOG.md",

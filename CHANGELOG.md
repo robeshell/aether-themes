@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.3 — 2026-08-27
+
+- Add `UPDATE_PROMPT.md` with one-line and full workflows for safely updating an existing Aether site through an AI agent.
+- Make the update workflow discoverable from `AGENTS.md`, `SKILL.md`, and the README.
+
 ## 0.1.2 — 2026-08-27
 
 - Restructure the README as an open-source project guide with badges, quick start, architecture, contributing, and release sections.
