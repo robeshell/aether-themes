@@ -1,11 +1,11 @@
 ---
 name: aether-blog
-description: "Set up, configure, and publish a content-first personal blog with Aether themes; use when an AI needs to turn a repository into a maintainable blog site."
+description: "Use Aether's AI-first, template-driven workflow to build and maintain a customizable personal blog."
 ---
 
 # Aether Blog Builder
 
-Use this skill to establish or maintain a personal blog without coupling the site's content to its visual theme package.
+Use this skill to let an AI agent establish or maintain a customizable personal blog without coupling the site's content to its visual theme package. The agent works by creating or updating the consuming site's editable templates; Aether itself remains a CSS theme layer and has no AI runtime dependency.
 
 ## Workflow
 

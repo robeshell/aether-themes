@@ -7,21 +7,28 @@
 [![Check package](https://github.com/robeshell/aether-themes/actions/workflows/check.yml/badge.svg)](https://github.com/robeshell/aether-themes/actions/workflows/check.yml)
 [![License](https://img.shields.io/npm/l/aether-themes)](./LICENSE)
 
-**A small, framework-agnostic theme layer for content-first personal sites.**
+**An AI-first, template-driven theme kit for customizable personal sites.**
 
-Aether gives a blog, notebook, photo journal, or music archive a distinct visual atmosphere without coupling the theme to one person's content, routes, or framework. It is the visual layer extracted from [W.Site](https://robeshell.github.io/).
+Aether combines a swappable CSS theme layer with AI-guided setup and maintenance workflows. It helps an agent create or update editable site templates without coupling the visual system to one person's content, routes, or framework. The theme layer was extracted from [W.Site](https://robeshell.github.io/).
 
 [Browse the demo site](https://robeshell.github.io/) · [Read the AI starter prompt](./STARTER_PROMPT.md) · [View the npm package](https://www.npmjs.com/package/aether-themes)
 
 ## What Aether is (and is not)
 
-Aether is a framework-agnostic CSS theme layer, not a complete blog theme, site generator, or CMS. It does not provide routes, a content model, an admin panel, or ready-made templates for every blogging platform.
+Aether is an AI-first, template-driven theme kit, not a complete blog theme, site generator, or CMS. It combines two layers:
+
+1. **Theme layer** — framework-agnostic CSS, design tokens, and a semantic markup contract.
+2. **AI builder layer** — prompts and a Skill that ask for the site's requirements, create or update editable templates, configure themes, and validate the result.
+
+It does not provide routes, a content model, an admin panel, or ready-made templates for every blogging platform. The generated site remains a normal project that can run without an AI service at runtime.
+
+Aether is intended for sites whose templates can be edited by an AI agent or a developer. It is not a universal adapter that can restyle arbitrary hosted-blog markup without template access.
 
 The guided starter workflow uses Astro by default. The package itself has no Astro runtime dependency and can be integrated with any framework or static-site generator that can load global CSS, emit HTML, and add the semantic hooks documented in [`THEME_CONTRACT.md`](./THEME_CONTRACT.md).
 
 | Environment | Integration level |
 | --- | --- |
-| Astro | First-class starter workflow |
+| Astro | First-class starter and template workflow |
 | Eleventy or plain HTML | Direct CSS integration |
 | Other HTML-producing frameworks or static-site generators | Compatible after mapping templates to the contract |
 | Existing CMS or blog markup | Not drop-in; requires a template adapter or local overrides |
@@ -33,7 +40,7 @@ In other words, Aether is portable, but it is not universally plug-and-play. The
 - **Seven swappable themes** using one semantic markup contract.
 - **Selective loading** so a site only ships the themes it offers.
 - **Framework-agnostic CSS** that works with Astro, Eleventy, plain HTML, and other static-site tools.
-- **AI-ready onboarding** through a repository-discoverable skill and a copy-and-paste starter prompt.
+- **AI-first setup and maintenance** through a repository-discoverable Skill and copy-and-paste prompts.
 - **No runtime dependencies** and no bundled franchise artwork or scraped assets.
 
 ## Themes
@@ -102,6 +109,8 @@ The generator validates theme names, duplicate entries, and `defaultTheme`. Use 
 ## Build a site with an AI agent
 
 For a guided, from-scratch setup, open an empty directory that will become your website and give the AI agent this repository as a reference. Do not open the Aether theme repository as the website's working directory: Aether is the dependency and visual layer, while your website owns its files, content, routes, and configuration.
+
+The agent's job is to create or modify the site's editable templates so they use Aether's semantic hooks. Aether does not infer arbitrary markup or rewrite a locked-down hosted blog automatically.
 
 The root [`AGENTS.md`](./AGENTS.md) and [`skills/aether-blog/SKILL.md`](./skills/aether-blog/SKILL.md) make the setup entry point discoverable in agents that support repository conventions.
 

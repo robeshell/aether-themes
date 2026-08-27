@@ -7,21 +7,28 @@
 [![检查状态](https://github.com/robeshell/aether-themes/actions/workflows/check.yml/badge.svg)](https://github.com/robeshell/aether-themes/actions/workflows/check.yml)
 [![许可证](https://img.shields.io/npm/l/aether-themes)](./LICENSE)
 
-**面向内容型个人网站的小型、框架无关主题层。**
+**面向可自定义模板个人网站的 AI-first 主题套件。**
 
-Aether 为博客、笔记、照片日记或音乐档案提供鲜明的视觉氛围，同时不绑定某个人的内容、路由或框架。它是从 [W.Site](https://robeshell.github.io/) 中提取出来的视觉层。
+Aether 将可切换的 CSS 主题层与 AI 驱动的建站、维护流程结合起来。它帮助 AI 创建或修改可编辑的网站模板，同时不把视觉系统绑定到某个人的内容、路由或框架。主题层提取自 [W.Site](https://robeshell.github.io/)。
 
 [浏览演示站](https://robeshell.github.io/) · [阅读 AI 正式建站提示词](./STARTER_PROMPT.md) · [查看 npm 包](https://www.npmjs.com/package/aether-themes)
 
 ## Aether 是什么，不是什么
 
-Aether 是框架无关的 CSS 主题层，不是完整的博客主题、站点生成器或 CMS。它不提供路由、内容模型、后台，也不会为所有博客平台自动生成现成模板。
+Aether 是 AI-first、模板驱动的主题套件，不是完整的博客主题、站点生成器或 CMS。它由两层组成：
+
+1. **主题层**——框架无关的 CSS、设计令牌和语义化标记契约。
+2. **AI 建站层**——负责询问需求、创建或修改可编辑模板、配置主题并验证结果的提示词和 Skill。
+
+它不提供路由、内容模型、后台，也不会为所有博客平台自动生成现成模板。生成后的网站仍然是普通项目，运行时不依赖 AI 服务。
+
+Aether 面向模板可以由 AI 或开发者编辑的网站。它不是一个能在无法访问模板的托管博客上直接套用样式的通用适配器。
 
 引导式建站流程默认使用 Astro，但包本身没有 Astro 运行时依赖。只要一个框架或静态站点生成器能够加载全局 CSS、输出 HTML，并添加 [`THEME_CONTRACT.md`](./THEME_CONTRACT.md) 中记录的语义化钩子，就可以接入 Aether。
 
 | 环境 | 接入程度 |
 | --- | --- |
-| Astro | 内置正式建站流程 |
+| Astro | 内置正式建站和模板流程 |
 | Eleventy 或原生 HTML | 可直接引入 CSS |
 | 其他能输出 HTML 的框架或静态站点生成器 | 将模板映射到契约后即可接入 |
 | 现有 CMS 或博客标记 | 不是即插即用，需要模板适配器或本地覆盖样式 |
@@ -33,7 +40,7 @@ Aether 是框架无关的 CSS 主题层，不是完整的博客主题、站点�
 - **七套可切换主题**，共用一份语义化标记契约。
 - **按需加载**，网站只打包实际提供的主题。
 - **框架无关**，可用于 Astro、Eleventy、原生 HTML 和其他静态站点工具。
-- **适合 AI 协作**，提供可被仓库发现的 Skill 和复制即用的建站提示词。
+- **AI-first 建站与维护**，提供可被仓库发现的 Skill 和复制即用的提示词。
 - **无运行时依赖**，不内置任何影视游戏版权图片或抓取素材。
 
 ## 主题
@@ -102,6 +109,8 @@ npx aether-themes \
 ## 使用 AI 创建网站
 
 正式建站时，请先打开一个准备作为网站根目录的空目录，再把本仓库作为参考交给 AI。不要把 Aether 主题仓库本身当作网站工作目录：Aether 是依赖和视觉层，网站才拥有文件、内容、路由和配置。
+
+AI 的工作是创建或修改网站的可编辑模板，让它使用 Aether 的语义化钩子。Aether 不会自动猜测任意 HTML 结构，也不会自动改写无法自定义模板的托管博客。
 
 如果你是第一次使用终端，请复制 [`STARTER_PROMPT.md`](./STARTER_PROMPT.md)。它会先询问站点名称、介绍、署名、栏目、语言和主题，等你确认方案后，直接在当前网站目录创建正式网站。如果发现当前目录是 Aether 主题仓库，它会停止，不会生成任何文件。
 

@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Clarify Aether's AI-first, template-driven positioning and runtime boundary.
+- Describe the theme layer and AI builder as separate parts of the project.
+- State that consuming templates must be editable by an AI agent or developer; arbitrary hosted-blog markup is not a drop-in target.
+
 ## 0.1.5 — 2026-08-27
 
 - Clarify that Aether is a CSS theme layer, not a drop-in theme for every blog system.

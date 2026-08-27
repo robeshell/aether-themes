@@ -1,7 +1,7 @@
 {
   "name": "aether-themes",
   "version": "0.1.5",
-  "description": "Framework-agnostic, swappable CSS themes and an AI-assisted starter workflow for personal sites.",
+  "description": "An AI-first, template-driven theme kit with swappable CSS themes for customizable personal sites.",
   "type": "module",
   "license": "MIT",
   "repository": {
@@ -54,6 +54,7 @@
     "themeable",
     "eleventy",
     "css-variables",
-    "ai-assisted"
+    "ai-first",
+    "template-driven"
   ]
 }

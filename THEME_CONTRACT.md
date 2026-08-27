@@ -1,6 +1,6 @@
 # Aether theme contract
 
-Aether is a CSS layer, not a page generator. The consuming site keeps ownership of markup, content, routes, and interaction logic. Themes style the following semantic hooks.
+Aether is the visual layer for AI- or developer-built sites with editable templates. It is a CSS layer, not a page generator or an adapter for arbitrary hosted-blog markup. The consuming site keeps ownership of markup, content, routes, and interaction logic. Themes style the following semantic hooks.
 
 ## Required hooks
 
