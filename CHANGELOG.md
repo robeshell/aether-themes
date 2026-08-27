@@ -3,6 +3,7 @@
 ## 0.1.3 — 2026-08-27
 
 - Add `UPDATE_PROMPT.md` with one-line and full workflows for safely updating an existing Aether site through an AI agent.
+- Make the starter workflow ask for site identity, content sections, language, and theme choices before creating files.
 - Make the update workflow discoverable from `AGENTS.md`, `SKILL.md`, and the README.
 
 ## 0.1.2 — 2026-08-27

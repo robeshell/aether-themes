@@ -86,7 +86,13 @@ The generator validates theme names, duplicate entries, and `defaultTheme`. Use 
 
 For a guided, from-scratch setup, give this repository to an AI coding agent and ask it to read [`skills/aether-blog/SKILL.md`](./skills/aether-blog/SKILL.md). The root [`AGENTS.md`](./AGENTS.md) makes the entry point discoverable in agents that support the convention.
 
-If you are new to terminal-based development, copy [`STARTER_PROMPT.md`](./STARTER_PROMPT.md). It tells the agent to create a disposable test site inside the current workspace, install Aether, configure selected themes, render representative content, run the build, and report the result without modifying the theme source.
+If you are new to terminal-based development, copy [`STARTER_PROMPT.md`](./STARTER_PROMPT.md). It first asks a short setup questionnaire about the site name, description, author, sections, language, and themes, then creates a disposable test site inside the current workspace after you confirm the plan.
+
+The shortest handoff message is:
+
+```text
+请阅读 https://github.com/robeshell/aether-themes/blob/main/STARTER_PROMPT.md，先向我提问建站需求，等我确认方案后，再按提示词在当前目录从零创建并启动网站。
+```
 
 If you already have an Aether site, use [`UPDATE_PROMPT.md`](./UPDATE_PROMPT.md). It gives the agent a one-line update command plus a cautious full workflow that preserves content, configuration, local snapshots, and uncommitted work before rebuilding and checking the site.
 

@@ -9,7 +9,7 @@ Use this skill to establish or maintain a personal blog without coupling the sit
 
 ## Workflow
 
-1. Inspect the repository before changing it. Preserve existing content, routes, framework choices, and uncommitted work. If maintaining an existing Aether site, read [`UPDATE_PROMPT.md`](../../UPDATE_PROMPT.md) before changing the dependency or generated CSS. If no site exists, scaffold a small static site (Astro is the default) with semantic hooks from [`THEME_CONTRACT.md`](../../THEME_CONTRACT.md).
+1. Inspect the repository before changing it. Preserve existing content, routes, framework choices, and uncommitted work. If maintaining an existing Aether site, read [`UPDATE_PROMPT.md`](../../UPDATE_PROMPT.md) before changing the dependency or generated CSS. If no site exists and the owner has not supplied a brief, ask the setup questionnaire in [`STARTER_PROMPT.md`](../../STARTER_PROMPT.md), summarize the proposed site, and wait for confirmation before scaffolding a small static site (Astro is the default) with semantic hooks from [`THEME_CONTRACT.md`](../../THEME_CONTRACT.md).
 2. Create `aether.config.mjs` from [`aether.config.example.mjs`](../../aether.config.example.mjs). Keep only the themes the owner wants, ensure `defaultTheme` is enabled, and keep labels/descriptions in the consuming site.
 3. Generate the selected CSS bundle with `generate-theme-css.mjs`. Make the theme picker read the same `themes` array so disabled themes are not offered in the UI.
 4. Keep content in a collection or Markdown directory separate from theme code. A typical entry has `title`, `description`, `date`, and `section` frontmatter. Use the site's existing content model when one exists.
