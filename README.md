@@ -34,6 +34,8 @@ For a site that offers every built-in theme, import `aether-themes/all.css` inst
 
 For AI-assisted site setup, give the repository to an agent and point it to [`skills/aether-blog/SKILL.md`](./skills/aether-blog/SKILL.md). The root [`AGENTS.md`](./AGENTS.md) makes this entry point discoverable in repositories that support the convention.
 
+If you are new to Aether, copy the complete [initial install and build prompt](./STARTER_PROMPT.md) to an AI agent. It creates a disposable test site inside the current directory, installs the package, configures selected themes, renders representative content, and runs the build without touching the repository source.
+
 ### Select only the themes you need
 
 Copy [`aether.config.example.mjs`](./aether.config.example.mjs) to your site as `aether.config.mjs`, remove the themes you do not want, and generate a small import bundle:

@@ -1,6 +1,6 @@
 {
   "name": "aether-themes",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Expressive, swappable CSS themes for personal sites.",
   "type": "module",
   "license": "MIT",
@@ -10,6 +10,7 @@
     "tools",
     "skills",
     "README.md",
+    "STARTER_PROMPT.md",
     "aether.config.example.mjs",
     "THEME_CONTRACT.md",
     "CHANGELOG.md",
