@@ -1,9 +1,17 @@
 {
   "name": "aether-themes",
-  "version": "0.1.1",
-  "description": "Expressive, swappable CSS themes for personal sites.",
+  "version": "0.1.2",
+  "description": "Framework-agnostic, swappable CSS themes and an AI-assisted starter workflow for personal sites.",
   "type": "module",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robeshell/aether-themes.git"
+  },
+  "homepage": "https://github.com/robeshell/aether-themes#readme",
+  "bugs": {
+    "url": "https://github.com/robeshell/aether-themes/issues"
+  },
   "sideEffects": ["**/*.css"],
   "files": [
     "styles",
@@ -36,6 +44,12 @@
     "themes",
     "personal-site",
     "astro",
-    "design-system"
+    "design-system",
+    "blog",
+    "static-site",
+    "themeable",
+    "eleventy",
+    "css-variables",
+    "ai-assisted"
   ]
 }

@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.2 — 2026-08-27
+
+- Restructure the README as an open-source project guide with badges, quick start, architecture, contributing, and release sections.
+- Add repository, homepage, issue tracker, and discovery keywords to the npm metadata.
+- Add GitHub Topics for CSS themes, static sites, design systems, and AI-assisted setup.
+
 ## 0.1.1 — 2026-08-27
 
 - Add a beginner-friendly `STARTER_PROMPT.md` for creating and building a first Aether site from the current workspace.
