@@ -4,10 +4,10 @@ This repository is intentionally ready to publish, but publishing is a separate 
 
 ## First GitHub release
 
-Create an empty public repository named `aether-site`, then push this repository's `main` branch:
+Create an empty public repository named `aether-themes`, then push this repository's `main` branch:
 
 ```sh
-git remote add origin https://github.com/robeshell/aether-site.git
+git remote add origin https://github.com/robeshell/aether-themes.git
 git push -u origin main
 ```
 
