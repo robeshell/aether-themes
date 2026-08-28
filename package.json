@@ -1,6 +1,6 @@
 {
   "name": "aether-themes",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "An AI-first, template-driven theme kit with swappable CSS themes for customizable personal sites.",
   "type": "module",
   "license": "MIT",
@@ -15,6 +15,7 @@
   "sideEffects": ["**/*.css"],
   "files": [
     "styles",
+    "scripts",
     "tools",
     "skills",
     "README.md",
@@ -38,7 +39,9 @@
     "./themes/cyber.css": "./styles/themes/cyber.css",
     "./themes/island.css": "./styles/themes/island.css",
     "./themes/wilds.css": "./styles/themes/wilds.css",
-    "./themes/persona.css": "./styles/themes/persona.css"
+    "./themes/persona.css": "./styles/themes/persona.css",
+    "./scripts/persona-titles.js": "./scripts/persona-titles.js",
+    "./scripts/markup.js": "./scripts/markup.js"
   },
   "bin": {
     "aether-themes": "tools/generate-theme-css.mjs"

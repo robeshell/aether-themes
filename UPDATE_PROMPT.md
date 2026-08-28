@@ -65,6 +65,7 @@ https://github.com/robeshell/aether-themes
 
 - 先读取 Aether 仓库的 CHANGELOG.md，说明有哪些主题变化。
 - 按当前项目原来的方式重新生成 CSS。
+- 如果项目还同步了 Aether 的 `scripts/`，一并更新这些脚本快照。
 - 不要修改 themes 列表，不要改变默认主题。
 
 三、重新生成和检查

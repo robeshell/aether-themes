@@ -17,7 +17,7 @@ Aether 将可切换的 CSS 主题层与 AI 驱动的建站、维护流程结合�
 
 Aether 是 AI-first、模板驱动的主题套件，不是完整的博客主题、站点生成器或 CMS。它由两层组成：
 
-1. **主题层**——框架无关的 CSS、设计令牌和语义化标记契约。
+1. **主题层**——框架无关的 CSS、可选的原生 JS 片段、设计令牌和语义化标记契约。
 2. **AI 建站层**——负责询问需求、创建或修改可编辑模板、配置主题并验证结果的提示词和 Skill。
 
 它不提供路由、内容模型、后台，也不会为所有博客平台自动生成现成模板。生成后的网站仍然是普通项目，运行时不依赖 AI 服务。
@@ -41,7 +41,7 @@ Aether 面向模板可以由 AI 或开发者编辑的网站。它不是一个能
 - **按需加载**，网站只打包实际提供的主题。
 - **框架无关**，可用于 Astro、Eleventy、原生 HTML 和其他静态站点工具。
 - **AI-first 建站与维护**，提供可被仓库发现的 Skill 和复制即用的提示词。
-- **无运行时依赖**，不内置任何影视游戏版权图片或抓取素材。
+- **无 npm 运行时依赖。** 预告信拆字和共用 SVG 路径以可选的原生 JS 片段提供。不内置影视游戏版权图片或抓取素材。
 
 ## 主题
 
@@ -126,7 +126,7 @@ AI 的工作是创建或修改网站的可编辑模板，让它使用 Aether 的
 
 ## 标记契约
 
-Aether 为语义化钩子提供样式，而不是生成固定路由的页面。必需钩子和富媒体钩子（图片、视频、音频、代码、公式、影集）见 [`THEME_CONTRACT.md`](./THEME_CONTRACT.md)。
+Aether 为语义化钩子提供样式，而不是生成固定路由的页面。必需钩子、富媒体钩子和可选运行时片段见 [`THEME_CONTRACT.md`](./THEME_CONTRACT.md)。
 
 网站负责维护：
 
@@ -135,6 +135,17 @@ Aether 为语义化钩子提供样式，而不是生成固定路由的页面。�
 - 主题选择器状态和持久化；
 - 网站文案和标签；
 - 素材授权及网站专属覆盖样式。
+
+预告信逐字标题、分割线 SVG 路径和列表箭头路径放在原生 ESM 片段里，不依赖 Astro 组件：
+
+```js
+import { applyThemeEnhancements } from 'aether-themes/scripts/persona-titles.js';
+import { createDivider, ENTRY_ARROW_PATH } from 'aether-themes/scripts/markup.js';
+
+applyThemeEnhancements(document.documentElement.dataset.theme);
+```
+
+在 `html[data-theme]` 变化时调用 `applyThemeEnhancements`。主题切换器的界面和持久化仍由网站自己维护。
 
 ## 可选图片
 

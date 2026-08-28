@@ -17,7 +17,7 @@ Aether combines a swappable CSS theme layer with AI-guided setup and maintenance
 
 Aether is an AI-first, template-driven theme kit, not a complete blog theme, site generator, or CMS. It combines two layers:
 
-1. **Theme layer** — framework-agnostic CSS, design tokens, and a semantic markup contract.
+1. **Theme layer** — framework-agnostic CSS, optional vanilla JS snippets, design tokens, and a semantic markup contract.
 2. **AI builder layer** — prompts and a Skill that ask for the site's requirements, create or update editable templates, configure themes, and validate the result.
 
 It does not provide routes, a content model, an admin panel, or ready-made templates for every blogging platform. The generated site remains a normal project that can run without an AI service at runtime.
@@ -41,7 +41,7 @@ In other words, Aether is portable, but it is not universally plug-and-play. The
 - **Selective loading** so a site only ships the themes it offers.
 - **Framework-agnostic CSS** that works with Astro, Eleventy, plain HTML, and other static-site tools.
 - **AI-first setup and maintenance** through a repository-discoverable Skill and copy-and-paste prompts.
-- **No runtime dependencies** and no bundled franchise artwork or scraped assets.
+- **No npm runtime dependencies.** Optional vanilla JS snippets cover Persona titles and shared SVG markup. No bundled franchise artwork or scraped assets.
 
 ## Themes
 
@@ -128,7 +128,7 @@ If you already have an Aether site, use [`UPDATE_PROMPT.md`](./UPDATE_PROMPT.md)
 
 ## Markup contract
 
-Aether styles semantic hooks rather than page-specific routes. Read [`THEME_CONTRACT.md`](./THEME_CONTRACT.md) for the required hooks and rich-content hooks, including images, video, audio, code, formulas, and galleries.
+Aether styles semantic hooks rather than page-specific routes. Read [`THEME_CONTRACT.md`](./THEME_CONTRACT.md) for the required hooks, rich-content hooks, and optional runtime snippets.
 
 The consuming site owns:
 
@@ -137,6 +137,17 @@ The consuming site owns:
 - theme-picker state and persistence;
 - site copy and labels;
 - asset licensing and site-specific overrides.
+
+Persona per-character titles, divider SVG paths, and list-arrow paths live in vanilla ESM so any site can import them without an Astro component:
+
+```js
+import { applyThemeEnhancements } from 'aether-themes/scripts/persona-titles.js';
+import { createDivider, ENTRY_ARROW_PATH } from 'aether-themes/scripts/markup.js';
+
+applyThemeEnhancements(document.documentElement.dataset.theme);
+```
+
+Call `applyThemeEnhancements` whenever `html[data-theme]` changes. The site still owns the theme picker UI and persistence.
 
 ## Optional imagery
 

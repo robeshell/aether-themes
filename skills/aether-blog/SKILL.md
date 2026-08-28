@@ -5,7 +5,7 @@ description: "Use Aether's AI-first, template-driven workflow to build and maint
 
 # Aether Blog Builder
 
-Use this skill to let an AI agent establish or maintain a customizable personal blog without coupling the site's content to its visual theme package. The agent works by creating or updating the consuming site's editable templates; Aether itself remains a CSS theme layer and has no AI runtime dependency.
+Use this skill to let an AI agent establish or maintain a customizable personal blog without coupling the site's content to its visual theme package. The agent works by creating or updating the consuming site's editable templates; Aether itself remains a CSS theme layer plus optional vanilla snippets, and has no AI runtime dependency.
 
 ## Workflow
 
@@ -21,7 +21,7 @@ Use this skill to let an AI agent establish or maintain a customizable personal 
 
 ## Boundaries
 
-- Aether owns CSS foundation and theme rules; the consuming site owns content, routes, copy, asset licenses, and interaction logic.
+- Aether owns CSS foundation, theme rules, and optional framework-agnostic snippets (`scripts/persona-titles.js`, `scripts/markup.js`); the consuming site owns content, routes, copy, asset licenses, and interaction chrome such as the theme picker UI and persistence.
 - The consuming site is created in its own workspace. `aether-ai-smoke-test` is reserved for package-maintainer smoke tests and must not be used as the default user-site destination.
 - Do not load every theme merely because it exists. The config and generated import bundle are the source of truth for enabled themes.
 - Do not copy Nintendo, SEGA, CDPR, Persona, or other franchise artwork into a generated public starter. Use original CSS treatments or user-owned assets.

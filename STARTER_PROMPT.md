@@ -91,6 +91,10 @@ https://github.com/robeshell/aether-themes
 - 文章详情页
 - 关于页面
 - 主题切换器
+- 页脚和文章标题下的 `.island-divider`（从 `aether-themes/scripts/markup.js` 取路径，或调用 `createDivider`）
+- 文章列表项里的 `.entry-card-shell`、`.entry-arrow`、`.entry-arrow--wilds`
+
+如果启用了 persona，在主题切换时调用 `aether-themes/scripts/persona-titles.js` 的 `applyThemeEnhancements`。不要把这些脚本内联进切换器后自己维护一份副本。
 
 如果我确认需要示例内容，请创建清楚标注为“示例”的文章，测试以下内容：
 
@@ -112,6 +116,8 @@ https://github.com/robeshell/aether-themes
 
 - 主题切换是否正常
 - 切换器是否只显示已启用的主题
+- 若启用 persona，标题是否被拆成单字
+- 分割线和列表箭头是否出现
 - 文章文字层级是否清晰
 - 图片、视频、音频、代码、公式和影集是否能显示
 - 桌面端是否正常
